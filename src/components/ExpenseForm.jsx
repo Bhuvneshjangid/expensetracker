@@ -8,6 +8,23 @@ const ExpenseForm = () => {
     const[type,setType]=useState("expense")
 
 
+     function handleSubmit(){
+        e.preventDefault();
+        
+        if(!title || !amount) return;
+
+        // its a function,we are sending these values as argument to the App.jsx component where we write the main code for the function and here we callthe function using the function name and pass values.
+        onAdd({ 
+            title:title,
+            amount:parseFloat(amount),
+            type:type
+        })
+
+        //now we set inputs empty
+        setTitle(" ")
+        setAmount(" ")
+
+    }
    
 
     return(
