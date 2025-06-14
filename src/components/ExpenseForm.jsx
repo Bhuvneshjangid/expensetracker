@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 
-const ExpenseForm = () => {
+const ExpenseForm = ({onAdd}) => {
 
-    const[title,setTitle]=useState()
-    const[amount,setAmount]=useState()
+    const[title,setTitle]=useState("")
+    const[amount,setAmount]=useState("")
     const[type,setType]=useState("expense")
 
 
-     function handleSubmit(){
+     function handleSubmit(e){
         e.preventDefault();
         
         if(!title || !amount) return;
