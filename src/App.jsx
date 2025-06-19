@@ -2,20 +2,22 @@ import ExpenseForm from './components/ExpenseForm'
 import ExpenseList from './components/ExpenseList'
 import './App.css'
 import { useState } from 'react'
+import Summary from './components/Summary'
 
 function App() {
 
-  const[expense,setExpense]=useState([])
+  const[expenses,setExpenses]=useState([])
 
-  const addExpense = (expense) => {
-    setExpense((prev) => [...prev,{...expense, id:Date.now() }] )
+  const addExpenses = (expenses) => {
+    setExpenses((prev) => [...prev,{...expenses, id:Date.now() }] )
   }
 
   return (
     <>
       <h1>Expense Tracker</h1>
-      <ExpenseForm onAdd={addExpense}/>
-      <ExpenseList expense={expense}/>
+      <ExpenseForm onAdd={addExpenses}/>
+      <Summary expenses={expenses}  />
+      <ExpenseList expenses={expenses}/>
     </>
   )
 }
