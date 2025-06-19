@@ -14,7 +14,6 @@ This is a simple and responsive **Expense Tracker App** built with **React** and
 |-----------------|----------------|
 | ![Form](./screenshots/projectImage1.png) | ![Summary](./screenshots/projectImage2.png) |
 
-> 🔍 You can add more images in the `screenshots/` folder and update the paths here.
 
 ---
 
