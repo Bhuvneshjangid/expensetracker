@@ -12,7 +12,7 @@ This is a simple and responsive **Expense Tracker App** built with **React** and
 
 | Add Transaction | Summary & List |
 |-----------------|----------------|
-| ![Form](./screenshots/projectImage1.png) | ![Summary](./screenshots/projectImage1.png) |
+| ![Form](./screenshots/projectImage1.png) | ![Summary](./screenshots/projectImage2.png) |
 
 > 🔍 You can add more images in the `screenshots/` folder and update the paths here.
 
