@@ -1,62 +1,69 @@
 import React, { useState } from "react";
+import "./ExpenseForm.css"; // 🎨 External CSS file for styling
 
+const ExpenseForm = ({ onAdd }) => {
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [type, setType] = useState("expense");
 
-const ExpenseForm = ({onAdd}) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const[title,setTitle]=useState("")
-    const[amount,setAmount]=useState("")
-    const[type,setType]=useState("expense")
+    if (!title || !amount) return;
 
+    onAdd({
+      title,
+      amount: parseFloat(amount),
+      type,
+    });
 
-     function handleSubmit(e){
-        e.preventDefault();
-        
-        if(!title || !amount) return;
+    setTitle("");
+    setAmount("");
+    setType("expense");
+  };
 
-        // its a function,we are sending these values as argument to the App.jsx component where we write the main code for the function and here we callthe function using the function name and pass values.
-        onAdd({ 
-            title:title,
-            amount:parseFloat(amount),
-            type:type
-        })
-
-        //now we set inputs empty
-        setTitle(" ")
-        setAmount(" ")
-
-    }
-   
-
-    return(
-        <div>
-            <form style={{ display:"flex",flexDirection:"column"}}  onSubmit={handleSubmit}>
-                <input
-                type="text"
-                placeholder="enter title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                />
-
-                <input
-                type="number"
-                placeholder="enter amount"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                />
-
-                <select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value="expense">Expense</option>
-                    <option value="income">Income</option>
-                </select>
-
-                <button type="submit">Add</button>
-
-            </form>
-
-          
+  return (
+    <div className="expense-form-container">
+      <h2 className="form-title">Add New Transaction</h2>
+      <form className="expense-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            placeholder="e.g. Groceries"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </div>
-    )
-}
 
+        <div className="form-group">
+          <label htmlFor="amount">Amount (₹)</label>
+          <input
+            id="amount"
+            type="number"
+            placeholder="e.g. 150"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="type">Type</label>
+          <select
+            id="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+          >
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+
+        <button type="submit" className="submit-btn">Add Transaction</button>
+      </form>
+    </div>
+  );
+};
 
 export default ExpenseForm;

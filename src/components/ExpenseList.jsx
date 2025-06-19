@@ -1,3 +1,6 @@
+import './ExpenseList.css';
+
+
 const ExpenseList = ({ expenses = [] }) => {
   return (
     <div className="list">

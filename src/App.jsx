@@ -1,25 +1,24 @@
-import ExpenseForm from './components/ExpenseForm'
-import ExpenseList from './components/ExpenseList'
-import './App.css'
-import { useState } from 'react'
-import Summary from './components/Summary'
+import { useState } from 'react';
+import ExpenseForm from './components/ExpenseForm';
+import ExpenseList from './components/ExpenseList';
+import Summary from './components/Summary';
+import './App.css';
 
 function App() {
+  const [expenses, setExpenses] = useState([]);
 
-  const[expenses,setExpenses]=useState([])
-
-  const addExpenses = (expenses) => {
-    setExpenses((prev) => [...prev,{...expenses, id:Date.now() }] )
-  }
+  const addExpenses = (expense) => {
+    setExpenses((prev) => [...prev, { ...expense, id: Date.now() }]);
+  };
 
   return (
-    <>
-      <h1>Expense Tracker</h1>
-      <ExpenseForm onAdd={addExpenses}/>
-      <Summary expenses={expenses}  />
-      <ExpenseList expenses={expenses}/>
-    </>
-  )
+    <div className="app-container">
+      <h1 className="main-title">💸 Expense Tracker</h1>
+      <ExpenseForm onAdd={addExpenses} />
+      <Summary expenses={expenses} />
+      <ExpenseList expenses={expenses} />
+    </div>
+  );
 }
 
-export default App
+export default App;
