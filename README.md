@@ -1,12 +1,50 @@
-# React + Vite
+# 💸 Expense Tracker App (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and responsive **Expense Tracker App** built with **React** and **Vite**. It allows users to:
+- Add income and expense transactions
+- View transaction history
+- See a summary of income, expenses, and balance
+- Fully styled with a modern **dark theme**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Preview
 
-## Expanding the ESLint configuration
+| Add Transaction | Summary & List |
+|-----------------|----------------|
+| ![Form](./screenshots/projectImage1.png) | ![Summary](./screenshots/projectImage1.png) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> 🔍 You can add more images in the `screenshots/` folder and update the paths here.
+
+---
+
+## 🚀 Features
+
+- ✅ Add expense/income with title, amount, and type
+- 🎯 View transaction list with colored indicators
+- 💡 Real-time total income, expense, and balance summary
+- 🌙 Modern **dark theme**
+- ⚛️ Built using **React + Vite**
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+---
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/Bhuvneshjangid/expensetracker.git
+cd expensetracker
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
