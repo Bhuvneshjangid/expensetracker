@@ -1,0 +1,88 @@
+/* Dark Theme + Professional Styling */
+
+:root {
+  --bg-dark: #1e1e2f;
+  --card-bg: #2a2a3b;
+  --input-bg: #3a3a4f;
+  --text-color: #f1f1f1;
+  --label-color: #c5c5dc;
+  --accent: #4f8bff;
+  --accent-hover: #3c6fdc;
+  --border-color: #555;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  font-family: "Segoe UI", "Inter", sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.expense-form-container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 2rem auto;
+  color: var(--text-color);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--label-color);
+}
+
+input,
+select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(79, 139, 255, 0.3);
+  outline: none;
+}
+
+.submit-btn {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-hover);
+}

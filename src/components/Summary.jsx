@@ -1,3 +1,6 @@
+import "./Summary.css";
+
+
 const Summary = ({ expenses = [] }) => {
   const income = expenses
     .filter((e) => e.type === "income")
